@@ -1,0 +1,614 @@
+:root {
+  --primary-gold: #d4af37;
+  --primary-blue: #021526;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif;
+  line-height: 1.6;
+  color: var(--primary-blue);
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--primary-blue);
+  color: var(--primary-gold);
+  padding: 1rem 0;
+  text-align: center;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Asegura que el header esté sobre el contenido */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el header */
+  /***********************************avance3--*/
+  transition: padding 0.3s ease;
+  /* Animación suave para el cambio de altura */
+  /*--avance3*************************************/
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* *************************Modificado avance 3--*/
+/* Menú de navegación */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+  transition: display 0.3s ease;
+  /* Animación para el menú */
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--primary-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+
+/* Avance 3--*/
+.menu-lineal {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--primary-gold);
+  cursor: pointer;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Al dar foco al botón */
+.menu-lineal:focus {
+  outline: none;
+}
+
+/*Diseño botón compra*/
+.add-to-cart{
+  background-color: #28a745; /* Color verde */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s
+}
+
+.add-to-cart:hover {
+  background-color: green;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.add-to-cart {
+  background-color: var(--primary-gold);
+  color: black;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+/*--Modificado avance 3*/
+/* --Avance 3***********************************/
+
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-blue);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--primary-gold);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #0a2e4a;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-blue);
+  color: var(--primary-gold);
+  padding: 3rem 0 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: var(--primary-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: var(--primary-gold);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/*Flex-anillo*/
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  flex: 1 1 250px;
+  max-width: 300px;
+  min-width: 250px;
+  font-size: 1.1rem;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  padding: 15px;
+  background-color: var(--primary-blue);
+  color: var(--primary-gold);
+  text-align: center;
+}
+
+.card p {
+  padding: 15px;
+  text-align: justify;
+}
+
+
+ /*  */
+
+ .button-container {
+  position: fixed;
+  top: 23px;
+  right: 10px;      
+  
+  display: flex;
+  background-color: #021526;
+  width: 250px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card p {
+    font-size: 2vw;
+    /* El texto se adapta dinámicamente al 
+   ancho de la ventana. El tamaño del texto dentro de los párrafos 
+   ahora utiliza 4vw (viewport width), 
+   lo que significa que el tamaño del texto será el 4% 
+   del ancho de la ventana. Esto lo hace más pequeño en pantallas 
+   pequeñas y más adaptable.*/
+  }
+}
+
+/* ***********************************************Modificado avance 3--*/
+@media (max-width: 600px) {
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    /* Centra todos los elementos dentro del nav */
+  }
+
+  /* Esconder el menú por defecto */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-blue);
+    /* Fondo de menú */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 10; /* Asegura que el menú esté por encima de otros elementos */
+  }
+
+  /* Mostrar el menú cuando se agregue la clase 'active' */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+    /* Espaciado entre los elementos */
+    text-align: center;
+    /* Centrado de los elementos */
+  }
+
+  .nav-links a {
+    color: #fff;
+  }
+
+  /* Expande el header cuando el menú se despliega */
+  header.expanded {
+    padding: 2rem 0;
+    /* Aumenta la altura del header cuando el menú se muestra */
+  }
+
+  /* Mostrar el botón hamburguesa */
+  .menu-lineal {
+    display: block;
+  }
+
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    /* Cambia a columna en pantallas más pequeñas */
+    text-align: center;
+    /* Asegura que el texto quede centrado */
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+/* ***********************************************Modificado avance 3--*/
+
+@media (max-width: 480px) {
+  .button-container {
+    flex-direction: column;
+    /* Cambia la dirección a vertical */
+    right: 5px;
+    /* Ajusta el margen derecho */
+    top: 5px;
+    /* Ajusta el margen superior */
+    width: auto;
+    /* Elimina la restricción de ancho fijo */
+    height: auto;
+    /* Elimina la restricción de altura fija */
+  }
+
+  .button {
+    margin: 5px 0;
+    /* Añade margen entre los botones en disposición vertical */
+    width: 30px;
+    /* Reduce el tamaño de los botones */
+    height: 30px;
+  }
+
+  .icon {
+    font-size: 16px;
+    /* Reduce el tamaño de los íconos */
+  }
+}
+/* LUPA */
+
+#search-container {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 60px; /* Ajusta según tu diseño */
+  right: 20px; /* Ajusta según tu diseño */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 1000;
+  width: 300px;
+}
+
+#search-container.active {
+  display: block; /* Muestra el contenedor cuando está activo */
+}
+
+#search-container input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#search-container button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #021526;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#search-container button:hover {
+  background-color: #014070;
+}
+
+/* Carrito */
+
+.cart-section {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 60px; /* Ajusta según tu diseño */
+  right: 20px; /* Ajusta según tu diseño */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 300px;
+  z-index: 1000;
+}
+
+.cart-section.active {
+  display: block; /* Muestra la sección cuando está activa */
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cart-total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.close-cart {
+  margin-top: 10px;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-cart:hover {
+  background-color: #c0392b;
+}
+
+.buy-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buy-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+/*Flex-anillo*/
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 80px;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  flex: 1 1 250px;
+  max-width: 300px;
+  min-width: 250px;
+  font-size: 1.1rem;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  padding: 13px;
+  background-color: var(--primary-blue); /*cambio de color de letra*/
+  color: white;
+  text-align: center;
+}
+
+.card p {
+  padding: 15px;
+  text-align: justify;
+}
+/*Filtro estilos*/
+.filtros {
+  color: var(--primary-blue);
+  padding: 1rem 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tipo-opciones{
+  color: var(--primary-blue);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+}
+
+#price-range {
+  width: 200px;
+}
+/*Filtro estilos*/
+@media (max-width: 480px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+.filtros{
+  font-size: 75%;
+}
+#price-range {
+  width: 100px;
+}
+.tipo-opciones{
+  font-size: 80%;
+}
+.filtro-long{
+display: none;
+}
+
+  .card p {
+    font-size: 2vw;
+    /* El texto se adapta dinámicamente al 
+   ancho de la ventana. El tamaño del texto dentro de los párrafos 
+   ahora utiliza 4vw (viewport width), 
+   lo que significa que el tamaño del texto será el 4% 
+   del ancho de la ventana. Esto lo hace más pequeño en pantallas 
+   pequeñas y más adaptable.*/
+  }
+}
+
